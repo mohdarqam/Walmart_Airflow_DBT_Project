@@ -1,0 +1,36 @@
+models:
+  - name: products_t
+    columns:
+      - name: product_id
+        description: "The unique identifier for each product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        description: "The name of the product."
+        data_tests:
+          - not_null
+
+      - name: category
+        description: "The category to which the product belongs."
+        data_tests:
+          - not_null
+
+      - name: price
+        description: "The price of the product."
+        data_tests:
+          - not_null
+
+  - name: orders_t
+    columns:
+      - name: order_id
+        description: "The unique identifier for each order."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "The unique identifier for the customer who placed the order."
+        data_tests:
+          - not_null
